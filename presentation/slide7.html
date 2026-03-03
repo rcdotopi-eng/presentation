@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 7 - Mutual Agreement</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles for the mobile screenshots to match previous slides */
+        .screenshots-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+        .app-screenshot {
+            width: 180px;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border: 4px solid #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        .app-screenshot:hover {
+            transform: translateY(-5px);
+        }
+        /* Step-specific vertical alignment to make it look dynamic */
+        .app-screenshot:nth-child(1) {
+            margin-top: 0px;
+        }
+        .app-screenshot:nth-child(2) {
+            margin-top: 40px;
+        }
+        .app-screenshot:nth-child(3) {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h3>Step 3: Matching & Fare Agreement</h3>
+        <div class="content-grid">
+            <div class="text-column">
+                <div class="text-box">
+                    <h4>1. Driver Marks "Available"</h4>
+                    <p>After reviewing the distance and route, interested drivers hit the "Available" button to bid for the ride.</p>
+                </div>
+                <div class="text-box" style="border-left-color: var(--danger);">
+                    <h4 style="color: var(--danger);">2. Interactive Rider Map</h4>
+                    <p>The rider now sees all available drivers populated on their live map. They can interact directly with the drivers through the app.</p>
+                </div>
+                <div class="text-box" style="border-left-color: #28A745;">
+                    <h4 style="color: #28A745;">3. Mutually Settled Fare & Completion</h4>
+                    <p>The rider and driver mutually agree on a fair price. Once accepted, the driver arrives, the ride is completed, and the rider securely rates the driver.</p>
+                </div>
+            </div>
+            
+            <div class="visual-column screenshots-container">
+                <img src="assests/captain-marked-available.jpeg" alt="Driver Marks Available" class="app-screenshot">
+                
+                <img src="assests/rider-veiwing-offers.jpeg" alt="Interactive Rider Offers" class="app-screenshot">
+                
+                <img src="assests/captain-veiwing-agreed-fare.jpeg" alt="Mutually Settled Fare" class="app-screenshot">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Workflow Step 3 | Slide 7</div>
+    <div class="navigation">
+        <a href="slide6.html" class="btn">Previous</a>
+        <a href="slide8.html" class="btn">Next</a>
+    </div>
+</body>
+</html>

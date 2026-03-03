@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 1 - RideLink NOC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --dark: #0f172a;
+            --muted: #64748b;
+            --bg: #f8fafc;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(circle at 100% 0%, #e0f2fe 0%, transparent 50%), 
+                              radial-gradient(circle at 0% 100%, #f1f5f9 0%, transparent 50%);
+            color: var(--dark);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .slide-container {
+            flex: 1;
+            padding: 5rem 8rem;
+            display: flex;
+            align-items: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            width: 100%;
+            align-items: center;
+        }
+        .text-column h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 0 0 1rem 0;
+            color: var(--dark);
+            letter-spacing: -1px;
+        }
+        .text-column h1 span {
+            color: var(--primary);
+        }
+        .text-column h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--muted);
+            margin: 0 0 3rem 0;
+            line-height: 1.4;
+        }
+        .presenter-box {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+            display: inline-block;
+        }
+        .presenter-box p { margin: 0; line-height: 1.6; }
+        .presenter-title { font-size: 1.1rem; color: var(--muted); font-weight: 500; }
+        .presenter-name { font-size: 1.3rem; color: var(--dark); font-weight: 700; font-family: 'Montserrat', sans-serif; }
+        
+        .visual-column { display: flex; justify-content: center; }
+        .hero-graphic {
+            width: 400px; height: 400px;
+            background: white;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.15);
+            position: relative;
+        }
+        .hero-graphic::before {
+            content: ''; position: absolute;
+            top: -20px; left: -20px; right: -20px; bottom: -20px;
+            border-radius: 50%;
+            border: 2px dashed #cbd5e1;
+            animation: spin 30s linear infinite;
+        }
+
+        /* Standard Footer & Nav */
+        .footer-bar {
+            background: white; padding: 1.5rem 3rem;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
+            font-weight: 600; color: var(--muted); font-size: 0.9rem;
+        }
+        .nav-buttons a {
+            text-decoration: none; font-family: 'Montserrat', sans-serif;
+            padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 700;
+            transition: all 0.2s; font-size: 0.9rem; margin-left: 10px;
+        }
+        .btn-prev { background: #f1f5f9; color: #94a3b8; cursor: not-allowed; }
+        .btn-next { background: var(--primary); color: white; box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3); }
+        .btn-next:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(14, 165, 233, 0.4); }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="content-grid">
+            <div class="text-column">
+                <h1>Revolutionizing Mobility in <span>Azad Kashmir</span></h1>
+                <h2>Proposal & NOC Request for RideLink Digital Ecosystem</h2>
+                
+                <div class="presenter-box">
+                    <p class="presenter-title">A Project by KD Automations</p>
+                    <p class="presenter-name">Presented by: Khalid Rafiq</p>
+                </div>
+            </div>
+            <div class="visual-column">
+                <div class="hero-graphic">
+                    <!-- Clean Abstract Tech Logo Placeholder -->
+                    <svg viewBox="0 0 200 200" width="250" height="250">
+                        <path d="M50 150 Q 100 50 150 150" fill="none" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M50 150 Q 100 100 150 150" fill="none" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round"/>
+                        <circle cx="50" cy="150" r="12" fill="#0f172a" />
+                        <circle cx="150" cy="150" r="12" fill="#0f172a" />
+                        <circle cx="100" cy="80" r="16" fill="#0ea5e9" stroke="white" stroke-width="6"/>
+                        <circle cx="100" cy="125" r="10" fill="#22c55e" stroke="white" stroke-width="4"/>
+                        <text x="100" y="190" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="22" fill="#0f172a">RideLink</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <div>Head Office: Rawalakot, AJK</div>
+        <div class="nav-buttons">
+            <a href="#" class="btn-prev">Previous</a>
+            <a href="slide2.html" class="btn-next">Next Slide &rarr;</a>
+        </div>
+    </div>
+</body>
+</html>

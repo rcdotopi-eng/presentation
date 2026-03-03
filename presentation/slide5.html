@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 5 - Rider Workflow</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles for the mobile screenshots */
+        .screenshots-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+        .app-screenshot {
+            width: 180px; /* Adjust width as needed to fit the slide */
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border: 4px solid #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        .app-screenshot:hover {
+            transform: translateY(-5px);
+        }
+        /* Step-specific vertical alignment to make it look dynamic */
+        .app-screenshot:nth-child(1) {
+            margin-top: 0px;
+        }
+        .app-screenshot:nth-child(2) {
+            margin-top: 40px;
+        }
+        .app-screenshot:nth-child(3) {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h3>Step 1: The Rider Journey</h3>
+        <div class="content-grid">
+            <div class="text-column">
+                <div class="text-box">
+                    <h4>1. Secure Authentication</h4>
+                    <p>New riders easily register and verify their accounts using a mobile number, Name, and an automated OTP (One-Time Password) system.</p>
+                </div>
+                <div class="text-box">
+                    <h4>2. Requesting a Ride</h4>
+                    <p>The rider inputs their exact <strong>Pickup location</strong>, desired <strong>Drop-off point</strong>, and selects the required <strong>Vehicle Type</strong> for their journey.</p>
+                </div>
+                <div class="text-box">
+                    <h4>3. Broadcasting the Request</h4>
+                    <p>With a single tap, the ride request is sent directly to the RideLink backend server to find the best matches.</p>
+                </div>
+            </div>
+            
+            <div class="visual-column screenshots-container">
+                <img src="assests/rider-otp-2.jpeg" alt="Secure Authentication OTP" class="app-screenshot">
+                
+                <img src="assests/rider-request-form-located.jpeg" alt="Requesting a Ride Form" class="app-screenshot">
+                
+                <img src="assests/rider-ride-sent.jpeg" alt="Broadcasting Ride Request" class="app-screenshot">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Workflow Step 1 | Slide 5</div>
+    <div class="navigation">
+        <a href="slide4.html" class="btn">Previous</a>
+        <a href="slide6.html" class="btn">Next</a>
+    </div>
+</body>
+</html>

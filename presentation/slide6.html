@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 6 - Driver Ecosystem</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles for the mobile screenshots to match Slide 5 */
+        .screenshots-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+        .app-screenshot {
+            width: 180px;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border: 4px solid #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        .app-screenshot:hover {
+            transform: translateY(-5px);
+        }
+        /* Step-specific vertical alignment to make it look dynamic */
+        .app-screenshot:nth-child(1) {
+            margin-top: 0px;
+        }
+        .app-screenshot:nth-child(2) {
+            margin-top: 40px;
+        }
+        .app-screenshot:nth-child(3) {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h3>Step 2: Driver Verification & Dispatch</h3>
+        <div class="content-grid">
+            <div class="text-column">
+                <div class="text-box">
+                    <h4>1. Driver Registration</h4>
+                    <p>Drivers register their Name, Mobile, and complete Vehicle details. They must be manually verified by our team before going active.</p>
+                </div>
+                <div class="text-box" style="border-left-color: var(--taxi-yellow);">
+                    <h4 style="color: #D39E00;">2. The 15km Backend Radar</h4>
+                    <p>Once a rider requests a ride, our backend algorithms instantly scan a <strong>15-kilometer radius</strong> to find active, verified drivers with matching vehicle types.</p>
+                </div>
+                <div class="text-box">
+                    <h4>3. Instant Notifications</h4>
+                    <p>Relevant drivers immediately see the ride request on their screens, including the pickup point, drop point, and total distance to the passenger.</p>
+                </div>
+            </div>
+            
+            <div class="visual-column screenshots-container">
+                <img src="assests/captain-regestration-form.jpeg" alt="Captain Registration Form" class="app-screenshot">
+                
+                <img src="assests/captain-documents-submitted.jpeg" alt="Profile Under Review" class="app-screenshot">
+                
+                <img src="assests/captain-online-veiwing-requests.jpeg" alt="Viewing Ride Requests" class="app-screenshot">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Workflow Step 2 | Slide 6</div>
+    <div class="navigation">
+        <a href="slide5.html" class="btn">Previous</a>
+        <a href="slide7.html" class="btn">Next</a>
+    </div>
+</body>
+</html>

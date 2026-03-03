@@ -1,0 +1,209 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap');
+
+:root {
+    /* Projector-Friendly Light Theme */
+    --bg-color: #FFFFFF;
+    --text-dark: #1A1D20;
+    --text-muted: #5C636A;
+    
+    /* RideLink Brand Colors */
+    --tech-blue: #0056B3;    /* Professional Tech Blue */
+    --taxi-yellow: #FFC107;  /* Classic Taxi Yellow */
+    --danger: #E63946;       /* Alert Red */
+    
+    /* Box Styling */
+    --box-bg: #F8F9FA;
+    --box-border: #E9ECEF;
+    --shadow: rgba(0, 86, 179, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Page Transition Animation */
+.slide-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 10%;
+    animation: slideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography */
+h1 {
+    color: var(--tech-blue);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: var(--text-dark);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: var(--tech-blue);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--taxi-yellow);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* Professional Text Boxes */
+.content-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+}
+
+.text-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.visual-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    border-left: 5px solid var(--tech-blue);
+    border-radius: 8px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 86, 179, 0.15);
+}
+
+.text-box h4 {
+    color: var(--tech-blue);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.text-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Customized Uploaded Logo Display */
+.logo-circle-wrapper {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    /* This background closely matches the uploaded image's blue to blend seamlessly */
+    background: #021a44; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid var(--taxi-yellow);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.logo-circle-wrapper img {
+    width: 110%; /* Slight zoom to fit text perfectly */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Visuals (SVGs) */
+svg {
+    max-width: 100%;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Navigation & Footer */
+.navigation {
+    position: fixed;
+    bottom: 2rem;
+    right: 10%;
+    display: flex;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.btn {
+    text-decoration: none;
+    background: var(--tech-blue);
+    color: var(--bg-color);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background: var(--taxi-yellow);
+    color: var(--text-dark);
+}
+
+.btn.disabled {
+    background: #E9ECEF;
+    color: #ADB5BD;
+    pointer-events: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 2rem;
+    left: 10%;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--box-border);
+    padding-top: 1rem;
+    width: 30%;
+    font-weight: 500;
+}
