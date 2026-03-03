@@ -3,161 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RideLink | Download Android Apps</title>
+    <title>Slide 9 - Thank You & Download</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
+        /* Integrated Styles for App Download Cards */
         :root {
-            --primary: #22c55e; /* Modern Green */
-            --secondary: #3b82f6; /* Trust Blue */
-            --bg: #020617;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
+            --app-primary: #22c55e;
+            --app-secondary: #3b82f6;
+            --app-dark: #020617;
+            --app-glass: rgba(2, 6, 23, 0.85); /* Darkened for light-theme slide compatibility */
+            --app-border: rgba(255, 255, 255, 0.1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
+        .downloads-wrapper {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            background-image: 
-                radial-gradient(circle at 0% 0%, rgba(34, 197, 94, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.15) 0%, transparent 25%);
-            color: #f8fafc;
-            line-height: 1.6;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
-        .header { text-align: center; margin-bottom: 4rem; }
-        
-        .logo {
+        .downloads-title {
+            text-align: center;
+            font-size: 1.5rem;
             font-weight: 800;
-            font-size: 2.5rem;
-            letter-spacing: -1px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--app-primary), var(--app-secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
         }
 
-        .tagline { color: #94a3b8; font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            width: 100%;
-            max-width: 1000px;
-        }
-
-        .card {
-            background: var(--glass);
+        .app-card {
+            background: var(--app-glass);
             backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 3rem 2rem;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .icon-box {
-            width: 80px;
-            height: 80px;
-            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--app-border);
             border-radius: 20px;
-            margin: 0 auto 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            color: #f8fafc;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.3);
+            background: #0f172a;
+        }
+
+        .app-icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            margin: 0 auto 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
-        h2 { font-size: 1.75rem; margin-bottom: 1rem; }
-        .card p { color: #94a3b8; margin-bottom: 2rem; min-height: 50px; }
+        .app-card h2 { 
+            font-size: 1.25rem; 
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .app-card p { 
+            color: #94a3b8; 
+            font-size: 0.85rem;
+            margin-bottom: 1.2rem; 
+            line-height: 1.4;
+        }
 
-        .btn {
+        .app-btn {
             display: block;
-            padding: 1rem 2rem;
-            border-radius: 14px;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 700;
             transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
         }
 
-        .btn-rider { background: var(--primary); color: #052e16; }
-        .btn-captain { background: var(--secondary); color: #082f49; }
+        .app-btn-rider { 
+            background: var(--app-primary); 
+            color: #052e16; 
+        }
         
-        .btn:hover { filter: brightness(1.2); transform: scale(1.02); }
+        .app-btn-captain { 
+            background: var(--app-secondary); 
+            color: #082f49; 
+        }
+        
+        .app-btn:hover { 
+            filter: brightness(1.15); 
+            transform: scale(1.02); 
+        }
 
-        .install-guide {
-            margin-top: 5rem;
-            max-width: 600px;
+        .install-hint {
             text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .install-guide h3 { margin-bottom: 1rem; color: #f1f5f9; }
-        .steps { color: #64748b; font-size: 0.9rem; text-align: left; display: inline-block; }
-        
-        footer { margin-top: auto; padding: 3rem 0; color: #475569; font-size: 0.8rem; }
-
-        @media (max-width: 480px) {
-            .grid { grid-template-columns: 1fr; }
-            .logo { font-size: 2rem; }
+            font-size: 0.75rem;
+            color: #6c757d;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
+    <div class="slide-container">
+        <div class="content-grid">
+            
+            <div class="text-column">
+                <h1 style="font-size: 3.5rem; margin-bottom: 2rem; color: var(--tech-blue, #0056B3);">Thank You for Your Time.</h1>
+                
+                <div class="text-box" style="margin-bottom: 2rem;">
+                    <h4>Ready for Deployment</h4>
+                    <p>RideLink is a fully developed, highly secure, and rigorously tested platform. We are prepared to serve the community immediately.</p>
+                </div>
+                
+                <div class="text-box" style="border-left: 4px solid var(--taxi-yellow, #FFC107); padding-left: 1rem;">
+                    <h4 style="color: #D39E00;">Prayer for Approval</h4>
+                    <p>We respectfully request the issuance of the NOC. With your approval, we can modernize AJK's transport sector, ensure public safety, and create honorable jobs.</p>
+                </div>
+            </div>
 
-    <header class="header">
-        <div class="logo">RIDELINK</div>
-        <p class="tagline">Smart mobility at your fingertips. Download the official Android APKs to get started.</p>
-    </header>
+            <div class="visual-column">
+                <div class="downloads-wrapper">
+                    <div class="downloads-title">Try RideLink Now</div>
+                    
+                    <div class="app-card">
+                        <div class="app-icon-box">📍</div>
+                        <h2>Rider App</h2>
+                        <p>Book a ride in seconds and reach your destination with ease.</p>
+                        <a href="https://drive.google.com/file/d/12H6VQwStmsW5u7z-aSmglLMBhRJr0nee/view?usp=drivesdk" target="_blank" class="app-btn app-btn-rider">Download Rider APK</a>
+                    </div>
 
-    <main class="grid">
-        <div class="card">
-            <div class="icon-box">📍</div>
-            <h2>Rider App</h2>
-            <p>Ready to go? Book a ride in seconds and reach your destination with ease.</p>
-            <a href="https://drive.google.com/file/d/12H6VQwStmsW5u7z-aSmglLMBhRJr0nee/view?usp=drivesdk">Download Rider APK</a>
+                    <div class="app-card">
+                        <div class="app-icon-box">🚗</div>
+                        <h2>Captain App</h2>
+                        <p>Join the fleet and earn on your own schedule.</p>
+                        <a href="https://drive.google.com/file/d/1T0FlNJry-pJjPCHKVlZ4ObpLqOvUWloi/view?usp=drivesdk" target="_blank" class="app-btn app-btn-captain">Download Captain APK</a>
+                    </div>
+
+                    <div class="install-hint">
+                        *If prompted, enable "Allow from this source" in settings to install.
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
 
-        <div class="card">
-            <div class="icon-box">🚗</div>
-            <h2>Captain App</h2>
-            <p>Turn your miles into money. Join the fleet and earn on your own schedule.</p>
-            <a href="https://drive.google.com/file/d/1T0FlNJry-pJjPCHKVlZ4ObpLqOvUWloi/view?usp=drivesdk" class="btn btn-captain">Download Captain APK</a>
-        </div>
-    </main>
-
-    <section class="install-guide">
-        <h3>How to Install</h3>
-        <div class="steps">
-            <p>1. Download the APK file from the links above.</p>
-            <p>2. Open your <strong>Downloads</strong> folder and click the file.</p>
-            <p>3. If prompted, enable <strong>"Allow from this source"</strong> in settings.</p>
-            <p>4. Click Install and launch RideLink!</p>
-        </div>
-    </section>
-
-    <footer>
-        &copy; 2026 RideLink Services. All rights reserved.
-    </footer>
-
+    <div class="footer">Conclusion | Slide 9</div>
+    <div class="navigation">
+        <a href="slide8.html" class="btn">Previous</a>
+        <a href="#" class="btn disabled">End Presentation</a>
+    </div>
 </body>
 </html>
